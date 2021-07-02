@@ -1,6 +1,7 @@
 import Card from "./components/card";
 import LeftMenu from "./components/left-menu/left-menu";
 import TopNavbar from "./components/top-navbar/top-navbar";
+import Graph from "./components/content/graph";
 import "./App.css";
 
 function App() {
@@ -11,13 +12,14 @@ function App() {
         <h1>Hello World!</h1>
 
         <div className="row">
-          <div className="col-3">
+          <div className="col-md-4">
             <LeftMenu />
           </div>
-          <div className="col">
+          <div className="col-md-8">
             <Card>
               <h5 className="card-title">Title!</h5>
               <p className="card-text">Some Text</p>
+              <Graph />
             </Card>
           </div>
         </div>
