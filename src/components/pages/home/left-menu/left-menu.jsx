@@ -1,6 +1,6 @@
-import Card from "../card";
+import Card from "../../../card";
 import DataCard from "./data-card";
-import SettingsCard from "./settings-card";
+import SettingsCard from "./exp-settings/settings-card";
 
 const LeftMenu = (props) => {
   return (
