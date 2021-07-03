@@ -9,7 +9,9 @@ const SimpleSettings = (props) => {
         <ExpSettings title="Simple" />
         <div id="simpleParams">
           <SmoothingParam title="Simple" type="Alpha" />
-          <button className="col-3 btn btn-sm btn-info mt-3">Optimize</button>
+          <button className="col-sm-3 btn btn-sm btn-info mt-3">
+            Optimize
+          </button>
         </div>
       </div>
     </Card>

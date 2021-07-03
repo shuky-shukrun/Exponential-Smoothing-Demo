@@ -11,7 +11,9 @@ const TripleSettings = (props) => {
           <SmoothingParam title="Triple" type="Alpha" />
           <SmoothingParam title="Triple" type="Beta" />
           <SmoothingParam title="Triple" type="Gama" />
-          <button className="col-3 btn btn-sm btn-info mt-3">Optimize</button>
+          <button className="col-sm-3 btn btn-sm btn-info mt-3">
+            Optimize
+          </button>
         </div>
       </div>
     </Card>
