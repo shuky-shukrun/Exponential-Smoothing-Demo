@@ -5,13 +5,18 @@ const DataCard = (props) => {
   const [data, setData] = useState(props.data);
   const dataRef = useRef();
 
-  function dataChangeHandler(event) {
-    console.log(dataRef.current.value);
+  function changeDataHandler(event) {
+    let dataStr = event.target.value;
     let newData = dataRef.current.value.split(",");
     newData = newData.map((val) => parseInt(val));
-    console.log(newData);
-    setData(newData);
+    setData(dataStr);
     props.onDataUpdate(newData);
+    console.log(newData);
+  }
+
+  function resetDataHandler() {
+    setData(props.defaultData);
+    props.onDataUpdate(props.defaultData);
   }
 
   return (
@@ -29,19 +34,17 @@ const DataCard = (props) => {
           rows="3"
           placeholder="10,4,1,6,..., 100"
           ref={dataRef}
-          defaultValue={data}
-          onChange={dataChangeHandler}
+          value={data}
+          //defaultValue={props.data}
+          onChange={changeDataHandler}
         ></textarea>
         <div className="row justify-content-end">
-          <button type="button" className="col-3 btn btn-light btn-sm m-2">
-            Reset
-          </button>
           <button
             type="button"
-            className="col-3 btn btn-primary btn-sm m-2"
-            onClick={dataChangeHandler}
+            className="col-3 btn btn-warning btn-sm m-2"
+            onClick={resetDataHandler}
           >
-            Update
+            Reset
           </button>
         </div>
       </div>

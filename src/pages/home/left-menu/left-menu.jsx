@@ -11,6 +11,7 @@ const LeftMenu = (props) => {
           className="mb-3"
           data={props.data}
           onDataUpdate={props.onDataUpdate}
+          defaultData={props.defaultData}
         />
         <SettingsCard />
       </Card>
