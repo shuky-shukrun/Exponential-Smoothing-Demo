@@ -17,6 +17,7 @@ const Graph = (props) => {
           datasets: [
             {
               data: [15339, 21345, 18483, 24003, 23489, 24092, 12034],
+              label: "Visitors",
               lineTension: 0,
               backgroundColor: "transparent",
               borderColor: "#007bff",
