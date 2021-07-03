@@ -7,7 +7,11 @@ const LeftMenu = (props) => {
     <div className={props.className ? props.className : ""}>
       <Card>
         <h5 className="card-title">Settings</h5>
-        <DataCard className="mb-3" />
+        <DataCard
+          className="mb-3"
+          data={props.data}
+          onDataUpdate={props.onDataUpdate}
+        />
         <SettingsCard />
       </Card>
       <br />
