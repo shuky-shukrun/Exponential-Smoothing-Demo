@@ -1,16 +1,17 @@
 import Card from "../../../../components/card";
-import SimpleSettings from "./simple-settings";
-import DoubleSettings from "./double-settings";
-import TripleSettings from "./triple-settings";
+import MethodSettings from "./method-settings";
 
 const SettingsCard = (props) => {
   return (
     <Card className={props.className ? props.className : ""}>
-      <SimpleSettings title="Simple" />
+      <MethodSettings title="Simple" smoothingParams={["Alpha"]} />
       <hr className="mt-4 mb-4"></hr>
-      <DoubleSettings title="Double" />
+      <MethodSettings title="Double" smoothingParams={["Alpha", "Beta"]} />
       <hr className="mt-4 mb-4"></hr>
-      <TripleSettings title="Triple" />
+      <MethodSettings
+        title="Triple"
+        smoothingParams={["Alpha", "Beta", "Gama"]}
+      />
     </Card>
   );
 };
