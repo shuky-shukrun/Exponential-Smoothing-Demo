@@ -4,11 +4,11 @@ const WhatIsPage = (props) => {
   return (
     <Card className={`mx-3 ${props.className ? props.className : ""}`}>
       <h4 className="card-title">Exponential smoothing</h4>
-      <section class="normal" id="section-">
-        <div id="expsmooth" class="section level1" number="7">
+      <section className="normal" id="section-">
+        <div id="expsmooth" className="section level1" number="7">
           <p>
             Exponential smoothing was proposed in the late 1950s{" "}
-            <span class="citation">
+            <span className="citation">
               (
               <a href="bibliography.html#ref-Brown59" role="doc-biblioref">
                 Brown, 1959
