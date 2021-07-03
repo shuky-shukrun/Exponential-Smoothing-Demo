@@ -1,10 +1,12 @@
+import { Link } from "react-router-dom";
+
 const TopNavbar = (props) => {
   return (
     <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <Link className="navbar-brand" to="/">
           Exponential Smoothing Demo
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -19,24 +21,18 @@ const TopNavbar = (props) => {
         <div className="collapse navbar-collapse" id="navbarCollapse">
           <ul className="navbar-nav me-auto mb-2 mb-md-0">
             <li className="nav-item">
-              <a className="nav-link border-end" aria-current="page" href="#">
-                What is Exp. Smoothing?
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link border-end" href="#">
-                About Us
-              </a>
-            </li>
-            <li className="nav-item">
-              <a
-                className="nav-link disabled"
-                href="#"
-                tabindex="-1"
-                aria-disabled="true"
+              <Link
+                className="nav-link border-end"
+                aria-current="page"
+                to="/what-is"
               >
-                Disabled
-              </a>
+                What is Exp. Smoothing?
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link border-end" to="/about-us">
+                About Us
+              </Link>
             </li>
           </ul>
           <form className="d-flex">
