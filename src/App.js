@@ -1,7 +1,7 @@
 import Card from "./components/card";
-import LeftMenu from "./components/pages/home/left-menu/left-menu";
+import LeftMenu from "./pages/home/left-menu/left-menu";
 import TopNavbar from "./components/top-navbar/top-navbar";
-import Graph from "./components/pages/home/content/graph";
+import Graph from "./pages/home/content/graph";
 import "./App.css";
 
 function App() {

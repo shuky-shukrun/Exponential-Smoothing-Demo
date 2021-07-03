@@ -1,4 +1,4 @@
-import Card from "../../../card";
+import Card from "../../../components/card";
 import DataCard from "./data-card";
 import SettingsCard from "./exp-settings/settings-card";
 

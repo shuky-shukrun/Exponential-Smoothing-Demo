@@ -1,4 +1,4 @@
-import Card from "../../../card";
+import Card from "../../../components/card";
 const DataCard = (props) => {
   return (
     <Card style={props.style} className={props.className}>

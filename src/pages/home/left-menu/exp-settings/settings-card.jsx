@@ -1,4 +1,4 @@
-import Card from "../../../../card";
+import Card from "../../../../components/card";
 import SimpleSettings from "./simple-settings";
 import DoubleSettings from "./double-settings";
 import TripleSettings from "./triple-settings";
