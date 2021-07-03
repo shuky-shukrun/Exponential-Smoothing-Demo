@@ -3,7 +3,7 @@ import SmoothingParam from "./sm-param";
 
 const TripleSettings = (props) => {
   return (
-    <div>
+    <div className={props.className ? props.className : ""}>
       <ExpSettings title="Triple" />
       <div id="tripleParams">
         <SmoothingParam title="Triple" type="Alpha" />

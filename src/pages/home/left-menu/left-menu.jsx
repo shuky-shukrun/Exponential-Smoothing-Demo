@@ -4,7 +4,7 @@ import SettingsCard from "./exp-settings/settings-card";
 
 const LeftMenu = (props) => {
   return (
-    <div>
+    <div className={props.className ? props.className : ""}>
       <Card>
         <h5 className="card-title">Settings</h5>
         <DataCard className="mb-3" />

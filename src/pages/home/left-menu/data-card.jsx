@@ -1,7 +1,10 @@
 import Card from "../../../components/card";
 const DataCard = (props) => {
   return (
-    <Card style={props.style} className={props.className}>
+    <Card
+      style={props.style ? props.style : {}}
+      className={props.className ? props.className : ""}
+    >
       <div>
         <label for="exampleFormControlTextarea1" class="form-label">
           Data (comma separated):

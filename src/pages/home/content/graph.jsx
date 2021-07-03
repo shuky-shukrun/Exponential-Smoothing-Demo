@@ -26,8 +26,6 @@ const Graph = (props) => {
             },
           ],
         }}
-        height={200}
-        width={400}
       />
     </div>
   );

@@ -5,7 +5,7 @@ import TripleSettings from "./triple-settings";
 
 const SettingsCard = (props) => {
   return (
-    <Card>
+    <Card className={props.className ? props.className : ""}>
       <SimpleSettings title="Simple" />
       <hr className="mt-4 mb-4"></hr>
       <DoubleSettings title="Double" />

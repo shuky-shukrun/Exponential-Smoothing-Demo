@@ -1,29 +1,23 @@
-import Card from "./components/card";
-import LeftMenu from "./pages/home/left-menu/left-menu";
 import TopNavbar from "./components/top-navbar/top-navbar";
-import Graph from "./pages/home/content/graph";
+import HomePage from "./pages/home/home-page";
+import AboutUsPage from "./pages/about-us/about-us";
 import "./App.css";
+import { Switch, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
       <TopNavbar />
-      <div style={{ margin: "0.5rem" }}>
-        <h1>Hello World!</h1>
-
-        <div className="row">
-          <div className="col-md-4">
-            <LeftMenu />
-          </div>
-          <div className="col-md-8">
-            <Card>
-              <h5 className="card-title">Title!</h5>
-              <p className="card-text">Some Text</p>
-              <Graph />
-            </Card>
-          </div>
-        </div>
-      </div>
+      <Switch>
+        <Route path="/" exact>
+          <HomePage />
+        </Route>
+        <Route path="/what-is"></Route>
+        <Route path="/about-us">
+          <AboutUsPage />
+        </Route>
+        <Route path="/login"></Route>
+      </Switch>
     </div>
   );
 }
