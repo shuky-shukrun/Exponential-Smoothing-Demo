@@ -7,7 +7,9 @@ const SettingsCard = (props) => {
   return (
     <Card>
       <SimpleSettings title="Simple" />
+      <hr className="mt-4 mb-4"></hr>
       <DoubleSettings title="Double" />
+      <hr className="mt-4 mb-4"></hr>
       <TripleSettings title="Triple" />
     </Card>
   );
