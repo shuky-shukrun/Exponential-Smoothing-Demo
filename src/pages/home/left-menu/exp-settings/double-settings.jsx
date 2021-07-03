@@ -1,10 +1,10 @@
-import ExpSettings from "./exp-settings";
+import MethodSwitch from "./method-switch";
 import SmoothingParam from "./sm-param";
 
 const DoubleSettings = (props) => {
   return (
     <div className={props.className ? props.className : ""}>
-      <ExpSettings title="Double" />
+      <MethodSwitch title="Double" />
       <div id="doubleParams">
         <SmoothingParam title="Double" type="Alpha" />
         <SmoothingParam title="Double" type="Beta" />

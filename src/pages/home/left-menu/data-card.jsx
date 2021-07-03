@@ -6,11 +6,11 @@ const DataCard = (props) => {
       className={props.className ? props.className : ""}
     >
       <div>
-        <label for="exampleFormControlTextarea1" class="form-label">
+        <label htmlFor="exampleFormControlTextarea1" className="form-label">
           Data (comma separated):
         </label>
         <textarea
-          class="form-control"
+          className="form-control"
           id="exampleFormControlTextarea1"
           rows="3"
           placeholder="10,4,1,6,..., 100"
@@ -19,7 +19,7 @@ const DataCard = (props) => {
           <button type="button" className="col-3 btn btn-light btn-sm m-2">
             Reset
           </button>
-          <button type="button" class="col-3 btn btn-primary btn-sm m-2">
+          <button type="button" className="col-3 btn btn-primary btn-sm m-2">
             Update
           </button>
         </div>

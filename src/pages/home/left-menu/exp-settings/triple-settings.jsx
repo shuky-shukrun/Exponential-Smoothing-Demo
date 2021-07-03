@@ -1,10 +1,10 @@
-import ExpSettings from "./exp-settings";
+import MethodSwitch from "./method-switch";
 import SmoothingParam from "./sm-param";
 
 const TripleSettings = (props) => {
   return (
     <div className={props.className ? props.className : ""}>
-      <ExpSettings title="Triple" />
+      <MethodSwitch title="Triple" isChecked={props.isChecked} />
       <div id="tripleParams">
         <SmoothingParam title="Triple" type="Alpha" />
         <SmoothingParam title="Triple" type="Beta" />

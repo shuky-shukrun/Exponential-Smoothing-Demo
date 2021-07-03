@@ -2,7 +2,7 @@ const SmoothingParam = (props) => {
   return (
     <div className={props.className ? props.className : ""}>
       <div className="row">
-        <label for="simpleAlpha" className="col-sm-2 col-form-label">
+        <label htmlFor="simpleAlpha" className="col-sm-2 col-form-label">
           {props.type}
         </label>
         <div className="col-sm-3">
