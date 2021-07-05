@@ -9,9 +9,9 @@ const DataCard = (props) => {
     let dataStr = event.target.value;
     let newData = dataRef.current.value.split(",");
     newData = newData.map((val) => parseInt(val));
+    newData = newData.filter((val) => !isNaN(val));
     setData(dataStr);
     props.onDataUpdate(newData);
-    console.log(newData);
   }
 
   function resetDataHandler() {
