@@ -1,19 +1,13 @@
 import { Line } from "react-chartjs-2";
 
 const Graph = (props) => {
+  const graphLabels = props.data.map((val, i) => "t" + i);
+
   return (
     <div>
       <Line
         data={{
-          labels: [
-            "Sunday",
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday",
-          ],
+          labels: graphLabels,
           datasets: [
             {
               data: props.data,
