@@ -1,3 +1,4 @@
+import { GraphUp } from "react-bootstrap-icons";
 import { Link } from "react-router-dom";
 
 const TopNavbar = (props) => {
@@ -5,6 +6,7 @@ const TopNavbar = (props) => {
     <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
+          <GraphUp style={{ color: "white" }} className="me-2" />
           Exponential Smoothing Demo
         </Link>
         <button
