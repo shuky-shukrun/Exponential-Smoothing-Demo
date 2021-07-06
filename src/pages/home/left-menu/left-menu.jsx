@@ -9,11 +9,14 @@ const LeftMenu = (props) => {
         <h5 className="card-title">Settings</h5>
         <DataCard
           className="mb-3"
-          data={props.data}
+          graphData={props.graphData}
           onDataUpdate={props.onDataUpdate}
           defaultData={props.defaultData}
         />
-        <SettingsCard />
+        <SettingsCard
+          onParamUpdate={props.onParamUpdate}
+          paramsData={props.paramsData}
+        />
       </Card>
       <br />
     </div>

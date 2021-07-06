@@ -4,6 +4,8 @@ const SmoothingParam = (props) => {
   const paramRef = useRef();
 
   function paramHandler(event) {
+    let newParam = { id: event.target.id, value: paramRef.current.value };
+    props.onParamUpdate(newParam);
     // TODO: implement logic here
   }
 
@@ -23,6 +25,10 @@ const SmoothingParam = (props) => {
             id={`${props.title}${props.type}`}
             ref={paramRef}
             onChange={paramHandler}
+            value={props.paramsData[`${props.title}${props.type}`]}
+            step={0.01}
+            min={0.0}
+            max={1.0}
           />
         </div>
       </div>

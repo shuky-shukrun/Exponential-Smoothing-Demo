@@ -1,4 +1,3 @@
-import Card from "../../components/card";
 import WhatIsDouble from "./what-is-double";
 import WhatIsGeneral from "./what-is-general";
 import WhatIsSimple from "./what-is-simple";

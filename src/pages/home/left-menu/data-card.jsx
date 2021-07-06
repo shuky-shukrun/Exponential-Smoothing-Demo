@@ -2,12 +2,12 @@ import { useRef, useState } from "react";
 import Card from "../../../components/card";
 
 const DataCard = (props) => {
-  const [data, setData] = useState(props.data);
-  const dataRef = useRef();
+  const [graphData, setData] = useState(props.graphData);
+  const graphDataRef = useRef();
 
   function changeDataHandler(event) {
     let dataStr = event.target.value;
-    let newData = dataRef.current.value.split(",");
+    let newData = graphDataRef.current.value.split(",");
     newData = newData.map((val) => parseInt(val));
     newData = newData.filter((val) => !isNaN(val));
     setData(dataStr);
@@ -33,8 +33,8 @@ const DataCard = (props) => {
           id="exampleFormControlTextarea1"
           rows="3"
           placeholder="10,4,1,6,..., 100"
-          ref={dataRef}
-          value={data}
+          ref={graphDataRef}
+          value={graphData}
           //defaultValue={props.data}
           onChange={changeDataHandler}
         ></textarea>
