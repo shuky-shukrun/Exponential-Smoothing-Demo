@@ -1,10 +1,13 @@
 import { Line } from "react-chartjs-2";
 
-import { DoubleExponentialSmoothing } from "./exponential-smoothing";
+import {
+  DoubleExponentialSmoothing,
+  HoltWintersSmoothing,
+} from "./exponential-smoothing";
 
 const Graph = (props) => {
-  let expMethod = new DoubleExponentialSmoothing(props.data, 0.2);
-  expMethod.optimizeParameter(50);
+  let expMethod = new HoltWintersSmoothing(props.data, 0.2, 0.0, 0.0, 7, true);
+  expMethod.optimizeParameters(50);
   const prediction = expMethod.predict();
   //console.log(prediction);
   const graphLabels = prediction.map((val, i) => "t" + i);

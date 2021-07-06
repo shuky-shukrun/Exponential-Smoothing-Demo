@@ -1,4 +1,31 @@
-# Getting Started with Create React App
+# Exponential Smoothing Demo
+
+This project demonstrate the different methods of Exponential Smoothing.
+
+## Project's Components Structure
+
+-App
+--HomePage
+---LeftMenu
+----DataCard
+----SettingsCard
+-----SimpleExponentialSmoothing (MethodSettings component)
+------AlphaSmoothingParam (SmoothingParam component)
+-----DoubleExponentialSmoothing (MethodSettings component)
+------AlphaSmoothingParam (SmoothingParam component)
+------BetaSmoothingParam (SmoothingParam component)
+-----TripleExponentialSmoothing (MethodSettings component)
+------AlphaSmoothingParam (SmoothingParam component)
+------BetaSmoothingParam (SmoothingParam component)
+------GamaSmoothingParam (SmoothingParam component)
+---Content
+----Graph
+--WhatIsPage
+---WhatIsCard
+---WhatIsCard
+---WhatIsCard
+--AboutUs
+---AboutUsCard
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
