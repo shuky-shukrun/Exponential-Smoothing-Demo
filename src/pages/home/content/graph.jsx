@@ -10,27 +10,28 @@ const Graph = (props) => {
   const { graphData, paramsData } = props;
   const simpleExp = new SimpleExponentialSmoothing(
     graphData,
-    paramsData["SimpleAlpha"]
+    paramsData.SimpleAlpha
   );
   const doubleExp = new DoubleExponentialSmoothing(
     graphData,
-    paramsData["DoubleAlpha"],
-    paramsData["DoubleBeta"]
+    paramsData.DoubleAlpha,
+    paramsData.DoubleBeta
   );
-  let tripleExp = new HoltWintersSmoothing(
+  const tripleExp = new HoltWintersSmoothing(
     graphData,
-    paramsData["TripleAlpha"],
-    paramsData["TripleBeta"],
-    paramsData["TripleGama"],
-    paramsData["TripleSeason"] ? paramsData["TripleSeason"] : 7,
+    paramsData.TripleAlpha,
+    paramsData.TripleBeta,
+    paramsData.TripleGama,
+    paramsData.TripleSeason,
     true
   );
 
   const simplePrediction = simpleExp.predict();
   const doublePrediction = doubleExp.predict();
   const triplePrediction = tripleExp.predict();
-
-  const graphLabels = triplePrediction.map((val, i) => "t" + i);
+  const graphLabels = triplePrediction
+    .filter((val) => !Number.isNaN(val))
+    .map((val, i) => "t" + i);
 
   return (
     <div>
@@ -57,7 +58,7 @@ const Graph = (props) => {
               borderColor: "#3FE4DE",
               borderWidth: 2,
               pointBackgroundColor: "#3FE4DE",
-              hidden: props.paramsData["SimpleSwitch"],
+              hidden: paramsData.SimpleSwitch,
             },
             // double prediction
             {
@@ -68,7 +69,7 @@ const Graph = (props) => {
               borderColor: "#3FE450",
               borderWidth: 2,
               pointBackgroundColor: "#3FE450",
-              hidden: props.paramsData["DoubleSwitch"],
+              hidden: paramsData.DoubleSwitch,
             },
             // triple prediction
             {
@@ -79,7 +80,7 @@ const Graph = (props) => {
               borderColor: "#E4A73F",
               borderWidth: 2,
               pointBackgroundColor: "#E4A73F",
-              hidden: props.paramsData["TripleSwitch"],
+              hidden: paramsData.TripleSwitch,
             },
           ],
         }}

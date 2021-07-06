@@ -16,6 +16,7 @@ const HomePage = (props) => {
     TripleAlpha: 0.5,
     TripleBeta: 0.5,
     TripleGama: 0.5,
+    TripleSeason: 7,
     SimpleSwitch: false,
     DoubleSwitch: false,
     TripleSwitch: false,

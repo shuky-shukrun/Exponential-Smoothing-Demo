@@ -37,15 +37,14 @@ const MethodSettings = (props) => {
             paramsData={props.paramsData}
           />
         ))}
-        {
-          <button
-            className="col-sm-3 btn btn-sm btn-info mt-3"
-            id={`Opt${props.title}Btn`}
-            onClick={optimizeHandler}
-          >
-            Optimize
-          </button>
-        }
+
+        <button
+          className="col-sm-3 btn btn-sm btn-info mt-3"
+          id={`Opt${props.title}Btn`}
+          onClick={optimizeHandler}
+        >
+          Optimize
+        </button>
       </div>
     </div>
   );

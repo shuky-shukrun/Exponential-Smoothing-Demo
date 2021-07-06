@@ -20,7 +20,7 @@ const SettingsCard = (props) => {
       <hr className="mt-4 mb-4"></hr>
       <MethodSettings
         title="Triple"
-        smoothingParams={["Alpha", "Beta", "Gama"]}
+        smoothingParams={["Alpha", "Beta", "Gama", "Season"]}
         onParamUpdate={props.onParamUpdate}
         paramsData={props.paramsData}
       />
