@@ -16,6 +16,7 @@ const LeftMenu = (props) => {
         <SettingsCard
           onParamUpdate={props.onParamUpdate}
           paramsData={props.paramsData}
+          graphData={props.graphData}
         />
       </Card>
       <br />

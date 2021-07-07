@@ -4,9 +4,8 @@ const SmoothingParam = (props) => {
   const paramRef = useRef();
 
   function paramHandler(event) {
-    let newParam = { id: event.target.id, value: event.target.value };
+    let newParam = [{ id: event.target.id, value: event.target.value }];
     props.onParamUpdate(newParam);
-    // TODO: implement logic here
   }
 
   return (

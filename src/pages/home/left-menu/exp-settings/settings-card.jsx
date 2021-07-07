@@ -9,6 +9,7 @@ const SettingsCard = (props) => {
         smoothingParams={["Alpha"]}
         onParamUpdate={props.onParamUpdate}
         paramsData={props.paramsData}
+        graphData={props.graphData}
       />
       <hr className="mt-4 mb-4"></hr>
       <MethodSettings
@@ -16,6 +17,7 @@ const SettingsCard = (props) => {
         smoothingParams={["Alpha", "Beta"]}
         onParamUpdate={props.onParamUpdate}
         paramsData={props.paramsData}
+        graphData={props.graphData}
       />
       <hr className="mt-4 mb-4"></hr>
       <MethodSettings
@@ -23,6 +25,7 @@ const SettingsCard = (props) => {
         smoothingParams={["Alpha", "Beta", "Gama", "Season"]}
         onParamUpdate={props.onParamUpdate}
         paramsData={props.paramsData}
+        graphData={props.graphData}
       />
     </Card>
   );
