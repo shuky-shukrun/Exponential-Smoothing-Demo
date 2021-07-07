@@ -4,9 +4,9 @@ import Graph from "./content/graph";
 import { useState } from "react";
 
 const HomePage = (props) => {
-  const graphDataDefault = [15339, 21345, 18483, 24003, 23489, 24092, 12034];
+  const graphDataDefault = [15339, 21345, 18483, 24003, 23489, 24092, 21543];
   const [graphData, setGraphData] = useState([
-    15339, 21345, 18483, 24003, 23489, 24092, 12034,
+    15339, 21345, 18483, 24003, 23489, 24092, 21543,
   ]);
 
   const [paramsData, setParamData] = useState({
@@ -29,7 +29,7 @@ const HomePage = (props) => {
   function paramUpdateHandler(param) {
     let newParams = {};
     newParams = Object.assign(newParams, paramsData);
-    newParams[param.id] = param.value;
+    newParams[param.id] = parseFloat(param.value);
     setParamData(newParams);
   }
 

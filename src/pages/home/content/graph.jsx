@@ -2,7 +2,7 @@ import { Line } from "react-chartjs-2";
 
 import {
   SimpleExponentialSmoothing,
-  DoubleExponentialSmoothing,
+  HoltSmoothing,
   HoltWintersSmoothing,
 } from "./exponential-smoothing";
 
@@ -12,7 +12,7 @@ const Graph = (props) => {
     graphData,
     paramsData.SimpleAlpha
   );
-  const doubleExp = new DoubleExponentialSmoothing(
+  const doubleExp = new HoltSmoothing(
     graphData,
     paramsData.DoubleAlpha,
     paramsData.DoubleBeta
