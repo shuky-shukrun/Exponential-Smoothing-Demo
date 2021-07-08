@@ -56,9 +56,9 @@ const Graph = (props) => {
             label: "User's Data",
             lineTension: 0.3,
             backgroundColor: "transparent",
-            borderColor: "#E43FDE",
+            borderColor: "#0",
             borderWidth: 2,
-            pointBackgroundColor: "#E43FDE",
+            pointBackgroundColor: "#0",
           },
           // simple prediction
           {
