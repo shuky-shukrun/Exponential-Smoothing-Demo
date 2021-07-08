@@ -1,4 +1,6 @@
 import MorPic from "../../images/mor.png";
+import ShukyPic from "../../images/shuky.jpg";
+import TeamMember from "./team-member";
 
 const AboutTeam = (props) => {
   return (
@@ -9,46 +11,21 @@ const AboutTeam = (props) => {
             <h3 className="main-heading">Our Team</h3>
             <div className="underline mx-auto"></div>
           </div>
-          <div className="col-md-4">
-            <div className="card shadow">
-              <img src={MorPic} className="w-100 border-bottom" alt="" />
-              <div className="card-body">
-                <h6>Mor Skurka</h6>
-                <div className="underline"></div>
-                <p>Software Engineer Student</p>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-4">
-            <div className="card shadow">
-              <img
-                src={MorPic}
-                className="w-100
-                   border-bottom"
-                alt=""
-              />
-              <div className="card-body">
-                <h6>Shuky Shukrun</h6>
-                <div className="underline"></div>
-                <p>Software Engineer Student</p>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-4">
-            <div className="card shadow">
-              <img
-                src={MorPic}
-                className="w-100
-                   border-bottom"
-                alt=""
-              />
-              <div className="card-body">
-                <h6>Uzin (The Dog)</h6>
-                <div className="underline"></div>
-                <p>The best dog!</p>
-              </div>
-            </div>
-          </div>
+          <TeamMember
+            src={MorPic}
+            name="Mor Skurka"
+            title="Software Engineer Student"
+          />
+          <TeamMember
+            src={ShukyPic}
+            name="Shuky Shukrun"
+            title="Software Engineer Student"
+          />
+          <TeamMember
+            src={MorPic}
+            name="Uzin (The Dog)"
+            title="The best dog!"
+          />
         </div>
       </div>
     </section>

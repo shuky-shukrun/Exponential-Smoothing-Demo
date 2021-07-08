@@ -1,8 +1,9 @@
 import { InfoCircle, Save, GraphUp } from "react-bootstrap-icons";
+import ServiceHead from "./service-head";
 
 const AboutService = (props) => {
   return (
-    <section className="section bg-c-light">
+    <section className="section">
       <div className="container">
         <div className="row">
           <div className="col-md-12 mb-4">
@@ -10,10 +11,10 @@ const AboutService = (props) => {
             <div className="underline"></div>
           </div>
           <div className="col-md-4 text-center">
-            <p>
-              <GraphUp className="me-4" size="100" />
-            </p>
-            <h5>Exponential Smoothing Demo</h5>
+            <ServiceHead
+              icon={<GraphUp className="me-4" size="100" />}
+              name="Exponential Smoothing Demo"
+            />
             <p>Runs three types of Exponential Smoothing methods:</p>
             <p>
               Simple Exponential Smoothing
@@ -24,17 +25,17 @@ const AboutService = (props) => {
             </p>
           </div>
           <div className="col-md-4 text-center">
-            <p>
-              <Save className="me-4" size="100" />
-            </p>
-            <h5>Save your data</h5>
+            <ServiceHead
+              icon={<Save className="me-4" size="100" />}
+              name="Save your data"
+            />
             <p>Save your data for reuse in the demo</p>
           </div>
           <div className="col-md-4 text-center">
-            <p>
-              <InfoCircle className="me-4" size="100" />
-            </p>
-            <h5>What is Exponential Smoothing?</h5>
+            <ServiceHead
+              icon={<InfoCircle className="me-4" size="100" />}
+              name="What is Exponential Smoothing?"
+            />
             <p>
               Get information about Exponential Smoothing and the three methods
             </p>
