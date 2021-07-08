@@ -1,4 +1,4 @@
-class SimpleExponentialSmoothing {
+export class SimpleExponentialSmoothing {
   constructor(data, alpha) {
     if (data == null) {
       throw new Error("data parameter is null");
@@ -71,7 +71,7 @@ class SimpleExponentialSmoothing {
 
 /*Double exponential smoothing */
 
-class DoubleExponentialSmoothing {
+export class DoubleExponentialSmoothing {
   constructor(data, alpha) {
     if (data == null) {
       throw new Error("data parameter is null");
@@ -173,7 +173,7 @@ class DoubleExponentialSmoothing {
 }
 
 /*Holt smoothing */
-class HoltSmoothing {
+export class HoltSmoothing {
   constructor(data, alpha, gamma) {
     if (data == null) {
       throw new Error("data parameter is null");
@@ -271,7 +271,7 @@ class HoltSmoothing {
 }
 
 /*Holt Winters smoothing */
-class HoltWintersSmoothing {
+export class HoltWintersSmoothing {
   constructor(data, alpha, gamma, delta, seasonLength, mult) {
     if (data == null) {
       throw new Error("data parameter is null");
@@ -474,7 +474,7 @@ class HoltWintersSmoothing {
 
 /*Moving average */
 
-class MovingAverage {
+export class MovingAverage {
   constructor(data) {
     if (data == null) {
       throw new Error("data parameter is null");
@@ -503,11 +503,3 @@ class MovingAverage {
     return result;
   }
 }
-
-module.exports = {
-  SimpleExponentialSmoothing: SimpleExponentialSmoothing,
-  DoubleExponentialSmoothing: DoubleExponentialSmoothing,
-  HoltSmoothing: HoltSmoothing,
-  HoltWintersSmoothing: HoltWintersSmoothing,
-  MovingAverage: MovingAverage,
-};
