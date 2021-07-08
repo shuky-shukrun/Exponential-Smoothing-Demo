@@ -1,5 +1,5 @@
 import { GraphUp } from "react-bootstrap-icons";
-import { Link, Redirect, useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { useAuth } from "../../contexts/auth-context";
 
 const TopNavbar = (props) => {
@@ -49,14 +49,13 @@ const TopNavbar = (props) => {
             </li>
           </ul>
           {currentUser && (
-            <p className="nav-link " style={{ color: "white" }}>
-              Email: {currentUser.email}
-            </p>
+            <div className="d-flex nav-link " style={{ color: "white" }}>
+              User: {currentUser.email}
+            </div>
           )}
-
           {currentUser && (
             <button
-              className="btn btn-outline-success"
+              className="d-flex btn btn-outline-success"
               type="submit"
               onClick={handleLogout}
             >
@@ -64,7 +63,11 @@ const TopNavbar = (props) => {
             </button>
           )}
           {!currentUser && (
-            <Link className="btn btn-outline-success" type="submit" to="/login">
+            <Link
+              className="d-flex btn btn-outline-success"
+              type="submit"
+              to="/login"
+            >
               Log In
             </Link>
           )}
