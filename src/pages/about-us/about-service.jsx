@@ -2,7 +2,7 @@ import { InfoCircle, Save, GraphUp } from "react-bootstrap-icons";
 
 const AboutService = (props) => {
   return (
-    <section className="section bg-c-light border-top">
+    <section className="section bg-c-light">
       <div className="container">
         <div className="row">
           <div className="col-md-12 mb-4">
