@@ -7,7 +7,7 @@ import { useHistory } from "react-router-dom";
 const LoginPage = () => {
   const emailRef = useRef();
   const passwordRef = useRef();
-  const { login, currentUser } = useAuth();
+  const { login } = useAuth();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const history = useHistory();
@@ -21,15 +21,19 @@ const LoginPage = () => {
       await login(emailRef.current.value, passwordRef.current.value);
       history.push("/");
     } catch {
-      setError("Failed to login");
+      setError("Try with demo user: admin@demo.com | demoUserPassword");
+    } finally {
+      setLoading(false);
     }
   }
   return (
-    <div className="row">
-      <div className="col-4 justify-content-center"></div>
-      <div className="col-3 justify-content-center">
+    <div
+      className="d-flex justify-content-center mt-5"
+      style={{ minHeight: "100vh" }}
+    >
+      <div className="w-100" style={{ maxWidth: "400px" }}>
         <Card>
-          <h3>Login</h3>
+          <h2 className="text-center mb-4">Log In</h2>
           <form onSubmit={handleSubmit}>
             <div className="mb-3">
               <label htmlFor="exampleInputEmail1" className="form-label">
@@ -56,17 +60,24 @@ const LoginPage = () => {
                 ref={passwordRef}
                 required
               />
-              {error && <div>{error}</div>}
+              {error && (
+                <div className="alert alert-danger mt-3" role="alert">
+                  {error}
+                </div>
+              )}
             </div>
             <div className="d-flex justify-content-center">
-              <button type="submit" className="btn btn-primary ">
+              <button
+                type="submit"
+                className="btn btn-primary "
+                disabled={loading}
+              >
                 Login
               </button>
             </div>
           </form>
         </Card>
       </div>
-      <div className="col-4 justify-content-center"></div>
     </div>
   );
 };
