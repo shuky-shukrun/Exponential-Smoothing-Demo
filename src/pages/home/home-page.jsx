@@ -5,12 +5,12 @@ import { useState } from "react";
 
 const HomePage = (props) => {
   const graphDataDefault = [
-    15339, 21345, 18483, 24003, 23489, 24092, 21543, 16339, 22345, 19483, 25003,
-    24489, 25092, 22543,
+    16070, 15704, 17092, 25586, 19741, 19340, 20579, 29328, 22717, 23185, 25358,
+    35746, 27625, 27515, 29107, 38763,
   ];
   const [graphData, setGraphData] = useState([
-    15339, 21345, 18483, 24003, 23489, 24092, 21543, 16339, 22345, 19483, 25003,
-    24489, 25092, 22543,
+    16070, 15704, 17092, 25586, 19741, 19340, 20579, 29328, 22717, 23185, 25358,
+    35746, 27625, 27515, 29107, 38763,
   ]);
 
   const [paramsData, setParamData] = useState({
@@ -20,7 +20,7 @@ const HomePage = (props) => {
     TripleAlpha: 0.5,
     TripleBeta: 0.5,
     TripleGama: 0.5,
-    TripleSeason: 7,
+    TripleSeason: 4,
     SimpleSwitch: true,
     DoubleSwitch: true,
     TripleSwitch: true,
