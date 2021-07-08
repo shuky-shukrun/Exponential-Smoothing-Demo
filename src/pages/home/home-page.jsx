@@ -52,8 +52,9 @@ const HomePage = (props) => {
         />
         <div className="col-md-8 mb-3 ms-2 table-responsive p-0">
           <Card>
-            <h5 className="card-title">Title!</h5>
-            <p className="card-text">Some Text</p>
+            <h4 className="card-title text-center">
+              Exponential Smoothing Graph
+            </h4>
             <Graph graphData={graphData} paramsData={paramsData} />
           </Card>
         </div>
