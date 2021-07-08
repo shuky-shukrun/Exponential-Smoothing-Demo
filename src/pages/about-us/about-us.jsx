@@ -1,10 +1,18 @@
+import AboutService from "./about-service";
+import AboutTeam from "./about-team";
+import AboutGeneral from "./about-general";
 import Card from "../../components/card";
 
 const AboutUsPage = (props) => {
   return (
-    <Card className={`mx-3 ${props.className ? props.className : ""}`}>
-      <div className="card-title">About us!</div>
-    </Card>
+    <div className="mx-3">
+      <Card>
+        <AboutGeneral />
+        <hr className="mt-4 mb-4"></hr>
+        <AboutService />
+      </Card>
+      <AboutTeam />
+    </div>
   );
 };
 
