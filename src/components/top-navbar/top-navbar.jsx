@@ -14,7 +14,7 @@ const TopNavbar = (props) => {
   }
 
   return (
-    <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <nav className="navbar navbar-expand-md navbar-dark bg-dark mb-2">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
           <GraphUp style={{ color: "white" }} className="me-2" />
@@ -33,6 +33,11 @@ const TopNavbar = (props) => {
         </button>
         <div className="collapse navbar-collapse" id="navbarCollapse">
           <ul className="navbar-nav me-auto mb-2 mb-md-0">
+            <li className="nav-item">
+              <Link className="nav-link border-end" aria-current="page" to="/">
+                Home
+              </Link>
+            </li>
             <li className="nav-item">
               <Link
                 className="nav-link border-end"

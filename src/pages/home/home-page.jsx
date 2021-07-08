@@ -41,20 +41,22 @@ const HomePage = (props) => {
 
   return (
     <div className={`${props.className ? props.className : ""}`}>
-      <div className="row">
+      <div className="row px-3">
         <LeftMenu
-          className="col-md-4 mx-3"
+          className="col-lg mb-3"
           graphData={graphData}
           onDataUpdate={dataUpdateHandler}
           onParamUpdate={paramUpdateHandler}
           defaultData={graphDataDefault}
           paramsData={paramsData}
         />
-        <Card className="align-self-start col-md-7 mx-3 ">
-          <h5 className="card-title">Title!</h5>
-          <p className="card-text">Some Text</p>
-          <Graph graphData={graphData} paramsData={paramsData} />
-        </Card>
+        <div className="col-md-8 mb-3 ms-2 table-responsive p-0">
+          <Card>
+            <h5 className="card-title">Title!</h5>
+            <p className="card-text">Some Text</p>
+            <Graph graphData={graphData} paramsData={paramsData} />
+          </Card>
+        </div>
       </div>
     </div>
   );
