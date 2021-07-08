@@ -8,7 +8,7 @@ import {
 } from "../../content/exponential-smoothing";
 
 const MethodSettings = (props) => {
-  const [isChecked, setChecked] = useState(true);
+  const [isChecked, setChecked] = useState(false);
 
   function switchHandler() {
     props.onParamUpdate([{ id: `${props.title}Switch`, value: isChecked }]);

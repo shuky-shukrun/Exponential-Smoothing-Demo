@@ -21,9 +21,9 @@ const HomePage = (props) => {
     TripleBeta: 0.5,
     TripleGama: 0.5,
     TripleSeason: 7,
-    SimpleSwitch: false,
-    DoubleSwitch: false,
-    TripleSwitch: false,
+    SimpleSwitch: true,
+    DoubleSwitch: true,
+    TripleSwitch: true,
   });
 
   function dataUpdateHandler(data) {
