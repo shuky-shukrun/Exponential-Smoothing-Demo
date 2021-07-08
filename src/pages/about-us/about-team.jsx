@@ -1,5 +1,7 @@
 import MorPic from "../../images/mor.png";
 import ShukyPic from "../../images/shuky.jpg";
+import UziPic from "../../images/uzi.jpg";
+
 import TeamMember from "./team-member";
 
 const AboutTeam = (props) => {
@@ -22,7 +24,7 @@ const AboutTeam = (props) => {
             title="Software Engineer Student"
           />
           <TeamMember
-            src={MorPic}
+            src={UziPic}
             name="Uzin (The Dog)"
             title="The best dog!"
           />
