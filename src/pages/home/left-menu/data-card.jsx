@@ -11,7 +11,7 @@ const DataCard = (props) => {
     newData = newData.map((val) => parseInt(val));
     newData = newData.filter((val) => !isNaN(val));
     setData(dataStr);
-    props.onDataUpdate(newData);
+    if (newData.length >= 2) props.onDataUpdate(newData);
   }
 
   function resetDataHandler() {
