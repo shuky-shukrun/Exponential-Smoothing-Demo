@@ -13,7 +13,7 @@ const DataCard = (props) => {
 
   function changeDataHandler(event) {
     let dataStr = event.target.value;
-    let newData = graphDataRef.current.value.split(",");
+    let newData = event.target.value.split(",");
     newData = newData.map((val) => parseInt(val));
     newData = newData.filter((val) => !isNaN(val));
     let regEx = /^(\s*|[-,0-9]+)$/;
@@ -21,9 +21,9 @@ const DataCard = (props) => {
     props.onDataUpdate(newData);
   }
 
-  function resetDataHandler() {
-    setData(props.defaultData);
-    props.onDataUpdate(props.defaultData);
+  function clearDataHandler() {
+    setData([]);
+    props.onDataUpdate([]);
   }
 
   function saveDataHandler() {
@@ -71,9 +71,9 @@ const DataCard = (props) => {
           <button
             type="button"
             className="col-3 btn btn-warning btn-sm m-2"
-            onClick={resetDataHandler}
+            onClick={clearDataHandler}
           >
-            Reset
+            Clear
           </button>
           {currentUser && (
             <button
