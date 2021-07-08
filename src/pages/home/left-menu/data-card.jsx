@@ -65,7 +65,9 @@ const DataCard = (props) => {
           value={graphData}
           onChange={changeDataHandler}
         ></textarea>
-        <div className="row justify-content-center">
+        <div
+          className={`row justify-content-${currentUser ? "center" : "end"}`}
+        >
           <button
             type="button"
             className="col-3 btn btn-warning btn-sm m-2"
