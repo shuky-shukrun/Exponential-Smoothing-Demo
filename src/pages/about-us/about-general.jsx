@@ -1,18 +1,18 @@
 const AboutGeneral = (props) => {
   return (
-    <section className="section bg-c-light">
+    <section className="section">
       <div className="container">
         <div className="row">
           <div className="col-md-12 ">
             <h3 className="main-heading">About Us</h3>
             <div className="underline "></div>
             <p>
-              Exponential smoothing was proposed in the late 1950s (Brown, 1959
-              Holt, 1957 Winters, 1960) , and has motivated some of the most
-              successful forecasting methods. Forecasts produced using
-              exponential smoothing methods are weighted averages of past
-              observations, with the weights decaying exponentially as the
-              observations get older.
+              This demo system is our final project on 'Advanced WEB technology'
+              course.
+              <br></br>
+              The system allows the user to run three different methods of
+              exponential smoothing and optimize the smoothing parameters in a
+              simple and convenient way.
             </p>
           </div>
         </div>

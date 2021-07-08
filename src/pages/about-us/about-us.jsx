@@ -2,6 +2,7 @@ import AboutService from "./about-service";
 import AboutTeam from "./about-team";
 import AboutGeneral from "./about-general";
 import Card from "../../components/card";
+import "../../App.css";
 
 const AboutUsPage = (props) => {
   return (
