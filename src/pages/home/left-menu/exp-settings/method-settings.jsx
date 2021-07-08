@@ -81,7 +81,7 @@ const MethodSettings = (props) => {
         ))}
 
         <button
-          className="col-sm-3 btn btn-sm btn-info mt-3"
+          className="btn btn-sm btn-info mt-3"
           id={`Opt${props.title}Btn`}
           onClick={optimizeHandler}
         >

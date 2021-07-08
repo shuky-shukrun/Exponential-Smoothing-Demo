@@ -28,12 +28,12 @@ const WhatIsTriple = (props) => {
       <p>
         <u>The equations for the additive method are:</u>
         <br></br>
-        <img src={TripAddEquation} alt="" srcset="" width="40%" />
+        <img src={TripAddEquation} alt="" width="40%" />
       </p>
       <p>
         <u>The equations for the multiplicative method are:</u>
         <br></br>
-        <img src={TripMultEquation} alt="" srcset="" width="30%" />
+        <img src={TripMultEquation} alt="" width="30%" />
       </p>
     </Card>
   );

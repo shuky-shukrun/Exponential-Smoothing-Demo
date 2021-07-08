@@ -10,14 +10,15 @@ const SmoothingParam = (props) => {
 
   return (
     <div className={props.className ? props.className : ""}>
-      <div className="row">
+      <div className="d-flex flex-row mb-2">
         <label
           htmlFor={`${props.title}${props.type}`}
-          className="col-sm-2 col-form-label"
+          className="form-label"
+          style={{ minWidth: "60px" }}
         >
           {props.type}
         </label>
-        <div className="col-sm-3">
+        <div className="col-3 col-lg-5">
           {props.type !== "Season" && (
             <input
               type="number"
@@ -29,9 +30,9 @@ const SmoothingParam = (props) => {
               step={0.01}
               min={0.0}
               max={1.0}
+              style={{ width: "80px" }}
             />
           )}
-
           {props.type === "Season" && (
             <input
               type="number"
@@ -41,6 +42,7 @@ const SmoothingParam = (props) => {
               value={props.paramsData[`${props.title}${props.type}`]}
               step={1}
               min={0}
+              style={{ width: "80px" }}
             />
           )}
         </div>

@@ -14,7 +14,7 @@ const TopNavbar = (props) => {
   }
 
   return (
-    <nav className="navbar navbar-expand-md navbar-dark bg-dark mb-2">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark mb-2">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
           <GraphUp style={{ color: "white" }} className="me-2" />

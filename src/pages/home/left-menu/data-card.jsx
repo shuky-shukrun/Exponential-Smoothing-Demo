@@ -59,7 +59,7 @@ const DataCard = (props) => {
         <textarea
           className="form-control"
           id="exampleFormControlTextarea1"
-          rows="3"
+          rows="4"
           placeholder="Enter at least 3 points to make a prediction"
           ref={graphDataRef}
           value={graphData}

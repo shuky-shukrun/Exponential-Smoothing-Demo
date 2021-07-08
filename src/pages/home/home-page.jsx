@@ -40,17 +40,17 @@ const HomePage = (props) => {
   }
 
   return (
-    <div className={`${props.className ? props.className : ""}`}>
-      <div className="row px-3">
+    <div className="px-3">
+      <div className="row">
         <LeftMenu
-          className="col-lg mb-3"
+          className="col-md-4 mb-3"
           graphData={graphData}
           onDataUpdate={dataUpdateHandler}
           onParamUpdate={paramUpdateHandler}
           defaultData={graphDataDefault}
           paramsData={paramsData}
         />
-        <div className="col-md-8 mb-3 ms-2 table-responsive p-0">
+        <div className="col-md-8">
           <Card>
             <h4 className="card-title text-center">
               Exponential Smoothing Graph
