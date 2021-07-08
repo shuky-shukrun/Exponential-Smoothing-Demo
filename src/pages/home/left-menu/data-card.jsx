@@ -10,7 +10,8 @@ const DataCard = (props) => {
     let newData = graphDataRef.current.value.split(",");
     newData = newData.map((val) => parseInt(val));
     newData = newData.filter((val) => !isNaN(val));
-    setData(dataStr);
+    let regEx = /^(\s*|[-,0-9]+)$/;
+    if (regEx.test(dataStr)) setData(dataStr);
     props.onDataUpdate(newData);
   }
 
@@ -35,7 +36,6 @@ const DataCard = (props) => {
           placeholder="Enter at least 3 points to make a prediction"
           ref={graphDataRef}
           value={graphData}
-          //defaultValue={props.data}
           onChange={changeDataHandler}
         ></textarea>
         <div className="row justify-content-end">
