@@ -8,30 +8,42 @@ import {
 
 const Graph = (props) => {
   const { graphData, paramsData } = props;
-  const simpleExp = new SimpleExponentialSmoothing(
-    graphData,
-    paramsData.SimpleAlpha
-  );
-  const doubleExp = new HoltSmoothing(
-    graphData,
-    paramsData.DoubleAlpha,
-    paramsData.DoubleBeta
-  );
-  const tripleExp = new HoltWintersSmoothing(
-    graphData,
-    paramsData.TripleAlpha,
-    paramsData.TripleBeta,
-    paramsData.TripleGama,
-    paramsData.TripleSeason,
-    true
-  );
 
-  const simplePrediction = simpleExp.predict();
-  const doublePrediction = doubleExp.predict();
-  const triplePrediction = tripleExp.predict();
-  const graphLabels = triplePrediction
-    .filter((val) => !Number.isNaN(val))
-    .map((val, i) => "t" + i);
+  let simplePrediction = [];
+  let doublePrediction = [];
+  let triplePrediction = [];
+  let graphLabels = [];
+
+  if (graphData.length > 2) {
+    const simpleExp = new SimpleExponentialSmoothing(
+      graphData,
+      paramsData.SimpleAlpha
+    );
+    const doubleExp = new HoltSmoothing(
+      graphData,
+      paramsData.DoubleAlpha,
+      paramsData.DoubleBeta
+    );
+    const tripleExp = new HoltWintersSmoothing(
+      graphData,
+      paramsData.TripleAlpha,
+      paramsData.TripleBeta,
+      paramsData.TripleGama,
+      paramsData.TripleSeason,
+      true
+    );
+
+    simplePrediction = simpleExp.predict();
+    doublePrediction = doubleExp.predict();
+    triplePrediction = tripleExp.predict();
+    graphLabels = triplePrediction
+      .filter((val) => !Number.isNaN(val))
+      .map((val, i) => "t" + i);
+  } else {
+    graphLabels = graphData
+      .filter((val) => !Number.isNaN(val))
+      .map((val, i) => "t" + i);
+  }
 
   return (
     <Line

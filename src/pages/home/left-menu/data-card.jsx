@@ -11,7 +11,7 @@ const DataCard = (props) => {
     newData = newData.map((val) => parseInt(val));
     newData = newData.filter((val) => !isNaN(val));
     setData(dataStr);
-    if (newData.length >= 2) props.onDataUpdate(newData);
+    props.onDataUpdate(newData);
   }
 
   function resetDataHandler() {
@@ -32,7 +32,7 @@ const DataCard = (props) => {
           className="form-control"
           id="exampleFormControlTextarea1"
           rows="3"
-          placeholder="10,4,1,6,..., 100"
+          placeholder="Enter at least 3 points to make a prediction"
           ref={graphDataRef}
           value={graphData}
           //defaultValue={props.data}
