@@ -5,24 +5,22 @@ import WhatIsPage from "./pages/what-is/what-is";
 
 import "./App.css";
 import { Switch, Route } from "react-router-dom";
+import LoginPage from "./pages/login-page/login-page";
+import { AuthProvider } from "./contexts/auth-context";
 
 function App() {
   return (
-    <div className="App">
-      <TopNavbar />
-      <Switch>
-        <Route path="/" exact>
-          <HomePage />
-        </Route>
-        <Route path="/what-is">
-          <WhatIsPage />
-        </Route>
-        <Route path="/about-us">
-          <AboutUsPage />
-        </Route>
-        <Route path="/login"></Route>
-      </Switch>
-    </div>
+    <AuthProvider>
+      <div className="App">
+        <TopNavbar />
+        <Switch>
+          <Route path="/" exact component={HomePage} />
+          <Route path="/what-is" component={WhatIsPage} />
+          <Route path="/about-us" component={AboutUsPage} />
+          <Route path="/login" component={LoginPage} />
+        </Switch>
+      </div>
+    </AuthProvider>
   );
 }
 

@@ -1,7 +1,18 @@
 import { GraphUp } from "react-bootstrap-icons";
-import { Link } from "react-router-dom";
+import { Link, Redirect, useHistory } from "react-router-dom";
+import { useAuth } from "../../contexts/auth-context";
 
 const TopNavbar = (props) => {
+  const { currentUser, logout } = useAuth();
+  const history = useHistory();
+
+  async function handleLogout() {
+    try {
+      await logout();
+      history.pushState("/");
+    } catch {}
+  }
+
   return (
     <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <div className="container-fluid">
@@ -32,22 +43,31 @@ const TopNavbar = (props) => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link border-end" to="/about-us">
+              <Link className="nav-link" to="/about-us">
                 About Us
               </Link>
             </li>
           </ul>
-          <form className="d-flex">
-            <input
-              className="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button className="btn btn-outline-success" type="submit">
-              Search
+          {currentUser && (
+            <p className="nav-link " style={{ color: "white" }}>
+              Email: {currentUser.email}
+            </p>
+          )}
+
+          {currentUser && (
+            <button
+              className="btn btn-outline-success"
+              type="submit"
+              onClick={handleLogout}
+            >
+              Log Out
             </button>
-          </form>
+          )}
+          {!currentUser && (
+            <Link className="btn btn-outline-success" type="submit" to="/login">
+              Log In
+            </Link>
+          )}
         </div>
       </div>
     </nav>
