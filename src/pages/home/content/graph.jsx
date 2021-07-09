@@ -96,6 +96,9 @@ const Graph = (props) => {
         ],
       }}
       options={{
+        animation: {
+          duration: 0,
+        },
         plugins: {
           legend: {
             onClick: null,
