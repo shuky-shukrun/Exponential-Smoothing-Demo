@@ -13,6 +13,13 @@ export const aboutUsInfo = {
         smoothing and optimize the smoothing parameters in a simple and
         convenient way.
       </p>
+      <p>
+        The source code of this project is available on{" "}
+        <a href="https://github.com/shuky-shukrun/Exponential-Smoothing-Demo">
+          GitHub
+        </a>
+        .
+      </p>
     </>
   ),
 };

@@ -36,6 +36,8 @@ const DataCard = (props) => {
 
   function loadDataHandler() {
     setLoading(true);
+    setData([]);
+    props.onDataUpdate([]);
     loadData(currentUser.uid).then((doc) => {
       // a trick: arrange the data in a way that will match the changeDataHandler method
       let newData = {
