@@ -30,21 +30,18 @@ const LoginPage = () => {
     }
   }
   return (
-    <div className="section back-color">
+    <div className="section">
       <div className="container">
         <Card>
-          <div className="row">
-            <div className="col">
-              <h2>Welcome Back!</h2>
-              <img className="w-100" src={LoginImg} alt="" />
-            </div>
-            <div className="col-md-4">
+          <div className="row align-items-center">
+            <div className="col d-flex justify-content-center">
               <div
                 className="card shadow"
                 style={{ width: "400px", height: "550px" }}
               >
                 <div className="text-center">
-                  <h2 className="m-3">Log In</h2>
+                  <h3 className="main-heading">Log In</h3>
+                  <div className="underline mx-auto"></div>
                   <PersonCircle size="100" />
                 </div>
                 <form onSubmit={handleSubmit}>
@@ -93,6 +90,10 @@ const LoginPage = () => {
                   </div>
                 </form>
               </div>
+            </div>
+            <div className="col-xl d-none d-xl-block">
+              {/* <h2 className="d-flex justify-content-center">Welcome!</h2> */}
+              <img className="w-100 " src={LoginImg} alt="" />
             </div>
           </div>
         </Card>
