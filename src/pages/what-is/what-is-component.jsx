@@ -1,18 +1,14 @@
-import Card from "../../components/card";
-import TripAddEquation from "../../images/trip-addition-equations.png";
-import TripMultEquation from "../../images/trip-mult-equations.png";
-
 const WhatIsComponent = (props) => {
   return (
-    <Card className={props.className ? props.className : ""}>
-      <div>
-        <h4 className="card-title main-heading ">
-          {props.title} Exponential smoothing
-        </h4>
-        <div className="underline"></div>
-      </div>
-      {props.info}
-    </Card>
+    <>
+      <section className="section">
+        <div className="container">
+          <h3 className="main-heading">{props.title} Exponential smoothing</h3>
+          <div className="underline"></div>
+          {props.info}
+        </div>
+      </section>
+    </>
   );
 };
 
