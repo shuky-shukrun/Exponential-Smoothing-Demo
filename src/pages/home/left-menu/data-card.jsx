@@ -13,7 +13,7 @@ const DataCard = (props) => {
   const graphDataRef = useRef();
 
   function changeDataHandler(event) {
-    let dataStr = event.target.value;
+    let dataStr = event.target.value.trim();
     let newData = event.target.value.split(",");
     newData = newData.map((val) => parseInt(val));
     newData = newData.filter((val) => !isNaN(val));
