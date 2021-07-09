@@ -1,7 +1,7 @@
 import TopNavbar from "./components/top-navbar/top-navbar";
 import HomePage from "./pages/home/home-page";
 import AboutUsPage from "./pages/about-us/about-us";
-import WhatIsPage from "./pages/what-is/what-is";
+import WhatIsPage from "./pages/what-is/what-is-page";
 import { Switch, Route } from "react-router-dom";
 import LoginPage from "./pages/login-page/login-page";
 import { AuthProvider } from "./contexts/auth-context";
