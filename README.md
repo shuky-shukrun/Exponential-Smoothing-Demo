@@ -7,6 +7,12 @@ The final result is available [here](https://exp-demo-6a3ed.web.app/).
 
 We used React, Bootstrap and Firebase (authentication and database).
 
+## Demo User
+
+You can log in the website with this account:\
+email: admin@demo.com \
+password: demoUserPassword
+
 ## Available Scripts
 
 In the project directory, you can run:
