@@ -11,13 +11,13 @@ const WhatIsPage = (props) => {
   return (
     <div className="px-3 pb-3">
       <Card>
-        <InfoComponent title="Exponential smoothing" info={generalInfo} />
+        <InfoComponent title="Exponential Smoothing" info={generalInfo} />
         <hr className="mt-4 mb-4"></hr>
-        <InfoComponent title="Simple Exponential smoothing" info={simpleInfo} />
+        <InfoComponent title="Simple Exponential Smoothing" info={simpleInfo} />
         <hr className="mt-4 mb-4"></hr>
-        <InfoComponent title="Double Exponential smoothing" info={doubleInfo} />
+        <InfoComponent title="Double Exponential Smoothing" info={doubleInfo} />
         <hr className="mt-4 mb-4"></hr>
-        <InfoComponent title="Triple Exponential smoothing" info={tripleInfo} />
+        <InfoComponent title="Triple Exponential Smoothing" info={tripleInfo} />
       </Card>
     </div>
   );
