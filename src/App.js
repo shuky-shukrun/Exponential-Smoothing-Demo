@@ -1,4 +1,4 @@
-import TopNavbar from "./components/top-navbar/top-navbar";
+import TopNavbar from "./pages/top-navbar/top-navbar";
 import HomePage from "./pages/home/home-page";
 import AboutUsPage from "./pages/about-us/about-us";
 import WhatIsPage from "./pages/what-is/what-is-page";
