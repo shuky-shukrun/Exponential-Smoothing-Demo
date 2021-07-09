@@ -3,6 +3,7 @@ import {
   simpleInfo,
   doubleInfo,
   tripleInfo,
+  creditInfo,
 } from "./what-is-info";
 import Card from "../../components/card";
 import InfoComponent from "../../components/info-component";
@@ -18,6 +19,8 @@ const WhatIsPage = (props) => {
         <InfoComponent title="Double Exponential Smoothing" info={doubleInfo} />
         <hr className="mt-4 mb-4"></hr>
         <InfoComponent title="Triple Exponential Smoothing" info={tripleInfo} />
+        <hr className="mt-4 mb-4"></hr>
+        <InfoComponent title="Credit" info={creditInfo} />
       </Card>
     </div>
   );

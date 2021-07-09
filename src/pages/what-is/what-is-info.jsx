@@ -114,3 +114,15 @@ export const tripleInfo = (
     </p>
   </>
 );
+
+export const creditInfo = (
+  <>
+    <p>
+      The information about Exponential Smoothing is written by Hyndman, R.J., &
+      Athanasopoulos, G. (2018) Forecasting: principles and practice, 2nd
+      edition, OTexts: Melbourne, Australia.{" "}
+      <a href="https://otexts.com/fpp2/">OTexts.com/fpp2</a>. Accessed on July
+      04, 2021.
+    </p>
+  </>
+);
