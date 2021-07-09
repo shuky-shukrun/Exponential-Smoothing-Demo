@@ -1,8 +1,11 @@
 import React, { useRef } from "react";
 import { useAuth } from "../../contexts/auth-context";
-import Card from "../../components/card";
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
+import { PersonCircle } from "react-bootstrap-icons";
+import LoginImg from "../../images/login3.png";
+import "../../App.css";
+import Card from "../../components/card";
 
 const LoginPage = () => {
   const emailRef = useRef();
@@ -27,55 +30,71 @@ const LoginPage = () => {
     }
   }
   return (
-    <div
-      className="d-flex justify-content-center mt-5"
-      style={{ minHeight: "100vh" }}
-    >
-      <div className="w-100" style={{ maxWidth: "400px" }}>
+    <div className="section back-color">
+      <div className="container">
         <Card>
-          <h2 className="text-center mb-4">Log In</h2>
-          <form onSubmit={handleSubmit}>
-            <div className="mb-3">
-              <label htmlFor="exampleInputEmail1" className="form-label">
-                Email address
-              </label>
-              <input
-                type="email"
-                className="form-control"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
-                ref={emailRef}
-                required
-              />
+          <div className="row">
+            <div className="col">
+              <h2>Welcome Back!</h2>
+              <img className="w-100" src={LoginImg} alt="" />
             </div>
-            <div className="mb-3">
-              <label htmlFor="exampleInputPassword1" className="form-label">
-                Password
-              </label>
-              <input
-                type="password"
-                className="form-control"
-                id="exampleInputPassword1"
-                placeholder="6-20 characters"
-                ref={passwordRef}
-                required
-              />
-              {error && (
-                <div className="alert alert-danger mt-3" role="alert">
-                  {error}
-                </div>
-              )}
-            </div>
-            <div className="d-flex justify-content-center">
-              <button
-                type="submit"
-                className="btn btn-primary "
-                disabled={loading}
+            <div className="col-md-4">
+              <div
+                className="card shadow"
+                style={{ width: "400px", height: "550px" }}
               >
-                Login
-              </button>
+                <div className="text-center">
+                  <h2 className="m-3">Log In</h2>
+                  <PersonCircle size="100" />
+                </div>
+                <form onSubmit={handleSubmit}>
+                  <div className="m-3">
+                    <label htmlFor="exampleInputEmail1" className="form-label">
+                      Email address
+                    </label>
+                    <input
+                      type="email"
+                      className="form-control"
+                      id="exampleInputEmail1"
+                      aria-describedby="emailHelp"
+                      ref={emailRef}
+                      required
+                    />
+                  </div>
+                  <div className="m-3">
+                    <label
+                      htmlFor="exampleInputPassword1"
+                      className="form-label"
+                    >
+                      Password
+                    </label>
+                    <input
+                      type="password"
+                      className="form-control"
+                      id="exampleInputPassword1"
+                      placeholder="6-20 characters"
+                      ref={passwordRef}
+                      required
+                    />
+                    {error && (
+                      <div className="alert alert-danger mt-3" role="alert">
+                        {error}
+                      </div>
+                    )}
+                  </div>
+                  <div className="d-flex justify-content-center">
+                    <button
+                      type="submit"
+                      className="btn btn-primary btn-size "
+                      disabled={loading}
+                    >
+                      Login
+                    </button>
+                  </div>
+                </form>
+              </div>
             </div>
-          </form>
+          </div>
         </Card>
       </div>
     </div>
