@@ -50,6 +50,7 @@ const DataCard = (props) => {
 
   function resetDataHandler() {
     setData(props.defaultData);
+    props.onDataUpdate(props.defaultData);
   }
 
   useEffect(() => {
