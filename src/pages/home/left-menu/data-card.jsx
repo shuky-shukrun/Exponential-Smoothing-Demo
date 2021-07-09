@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import Card from "../../../components/card";
 import { savaData, loadData } from "../../../contexts/db-context";
 import { useAuth } from "../../../contexts/auth-context";
+import { useEffect } from "react";
 
 const DataCard = (props) => {
   const [graphData, setData] = useState(props.graphData);
@@ -46,6 +47,14 @@ const DataCard = (props) => {
       setLoading(false);
     });
   }
+
+  function resetDataHandler() {
+    setData(props.defaultData);
+  }
+
+  useEffect(() => {
+    currentUser ? loadDataHandler() : resetDataHandler();
+  }, [currentUser]);
 
   return (
     <Card
