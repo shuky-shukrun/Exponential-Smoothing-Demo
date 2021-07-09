@@ -3,7 +3,12 @@ import Card from "../../components/card";
 const WhatIsSimple = (props) => {
   return (
     <Card className={props.className ? props.className : ""}>
-      <h4 className="card-title">{props.title} Exponential smoothing</h4>
+      <div>
+        <h4 className="card-title main-heading ">
+          {props.title} Exponential smoothing
+        </h4>
+        <div className="underline"></div>
+      </div>
       <p>
         Simple Exponential Smoothing is a time series forecasting method for
         univariate data without a trend or seasonality. It requires a single

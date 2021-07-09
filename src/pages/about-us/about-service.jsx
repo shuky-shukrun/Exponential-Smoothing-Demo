@@ -7,10 +7,10 @@ const AboutService = (props) => {
       <div className="container">
         <div className="row">
           <div className="col-md-12 mb-4">
-            <h3 className="main-heading">Our Service</h3>
+            <h3 className="main-heading ">Our Service</h3>
             <div className="underline"></div>
           </div>
-          <div className="col-md-4 text-center">
+          <div className="col-lg-4 text-center p-3">
             <ServiceHead
               icon={<GraphUp className="me-4" size="100" />}
               name="Exponential Smoothing Demo"
@@ -24,14 +24,14 @@ const AboutService = (props) => {
               Triple Exponential Smoothing
             </p>
           </div>
-          <div className="col-md-4 text-center">
+          <div className="col-lg-4 text-center p-3">
             <ServiceHead
               icon={<Save className="me-4" size="100" />}
               name="Save your data"
             />
-            <p>Save your data for reuse in the demo</p>
+            <p>Save your data in firebase database for reuse in the demo</p>
           </div>
-          <div className="col-md-4 text-center">
+          <div className="col-lg-4 text-center p-3">
             <ServiceHead
               icon={<InfoCircle className="me-4" size="100" />}
               name="What is Exponential Smoothing?"

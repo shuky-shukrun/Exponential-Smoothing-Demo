@@ -3,7 +3,10 @@ import Card from "../../components/card";
 const WhatIsGeneral = (props) => {
   return (
     <Card className={`mx-3 ${props.className ? props.className : ""}`}>
-      <h4 className="card-title">Exponential smoothing</h4>
+      <div>
+        <h4 className="card-title main-heading ">Exponential smoothing</h4>
+        <div className="underline"></div>
+      </div>{" "}
       <p>
         Exponential smoothing was proposed in the late 1950s (Brown, 1959 Holt,
         1957 Winters, 1960) , and has motivated some of the most successful

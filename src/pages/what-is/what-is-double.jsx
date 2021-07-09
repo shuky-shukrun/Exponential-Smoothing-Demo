@@ -3,7 +3,12 @@ import Card from "../../components/card";
 const WhatIsDouble = (props) => {
   return (
     <Card className={props.className ? props.className : ""}>
-      <h4 className="card-title">{props.title} Exponential smoothing</h4>
+      <div>
+        <h4 className="card-title main-heading ">
+          {props.title} Exponential smoothing
+        </h4>
+        <div className="underline"></div>
+      </div>
       <p>
         Double Exponential Smoothing extends Simple Exponential Smoothing to add
         support for trends in the univariate time series. In addition to the

@@ -5,7 +5,12 @@ import TripMultEquation from "../../images/trip-mult-equations.png";
 const WhatIsTriple = (props) => {
   return (
     <Card className={props.className ? props.className : ""}>
-      <h4 className="card-title">{props.title} Exponential smoothing</h4>
+      <div>
+        <h4 className="card-title main-heading ">
+          {props.title} Exponential smoothing
+        </h4>
+        <div className="underline"></div>
+      </div>
       <p>
         Triple Exponential Smoothing extends Double Exponential Smoothing to
         capture seasonality. In addition to the alpha and beta smoothing

@@ -1,6 +1,6 @@
 const TeamMember = (props) => {
   return (
-    <div className="col-md-4">
+    <div className="col-md-4 mb-4">
       <div className="card shadow">
         <img src={props.src} className="border-bottom m-3" alt="" />
         <div className="card-body">

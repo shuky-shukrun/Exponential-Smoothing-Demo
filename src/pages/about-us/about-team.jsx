@@ -16,12 +16,12 @@ const AboutTeam = (props) => {
           <TeamMember
             src={MorPic}
             name="Mor Skurka"
-            title="Software Engineer Student"
+            title="Software Engineering Student"
           />
           <TeamMember
             src={ShukyPic}
             name="Shuky Shukrun"
-            title="Software Engineer Student"
+            title="Software Engineering Student"
           />
           <TeamMember
             src={UziPic}

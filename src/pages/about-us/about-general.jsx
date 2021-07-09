@@ -7,8 +7,8 @@ const AboutGeneral = (props) => {
             <h3 className="main-heading">About Us</h3>
             <div className="underline "></div>
             <p>
-              This demo system is our final project on 'Advanced WEB technology'
-              course.
+              This demo system is our final project on 'Advanced WEB
+              Technologies' course.
               <br></br>
               The system allows the user to run three different methods of
               exponential smoothing and optimize the smoothing parameters in a
